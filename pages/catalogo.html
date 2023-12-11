@@ -59,19 +59,24 @@
                 </div>
               </nav>
         </header>
+    
         <section id="carrinho1" class="fixed-top" style="width: 30%; height: 100vh; background-color: gray; display:none;">
           <div>
             <div class="d-flex justify-content-end">
-            <button id="fecharCarrinho">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-              </svg>
-            </button>
+              <button id="fecharCarrinho">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              </button>
             </div>
             <p class="text-center">Meu Carrinho</p>
-            <ul id="lista-carrinho"></ul>
-            <p id="total-carrinho">Total: R$ 0.00</p>
+            <ul id="lista-carrinho" class="overflow-y-auto py-5 d-flex flex-column gap-3 " style="height: 500px;">
+              <!-- Itens do Carrinho são adicionados dinamicamente aqui -->
+            </ul>
+            <p id="total-carrinho" class="px-2">Total:</p>
+            <button type="button" class="py-2 px-2" style="background-color: gray; border: none; color:white" onclick="limparCarrinho()">Limpar Carrinho</button>
+            <a href="../pages/compras.html" class="btn-compra btn mx-1">Comprar</a>
           </div>
         </section>
         
@@ -102,11 +107,13 @@
                   <h5 class="card-title">Jaqueta Jeans</h5>
                   <p class="card-text">Jaqueta Denin - Azul - Unisex</p>
                   <h5>R$ 100,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Jaqueta Jenas', 100.00,'../images/image19.jpg')">Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1" id="compras">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " id="verMais" data-bs-toggle="modal" data-bs-target="#jeans">
+                  <div class="d-flex gap-2 align-content-center justify-content-center">
+                    <a href="#" class="btn btn" onclick="adicionarAoCarrinho('Jaqueta Jenas', 100.00,'../images/image19.jpg')">Adicionar</a>
+                  <button type="button" class="btn btn" id="verMais" data-bs-toggle="modal" data-bs-target="#jeans">
                     VER MAIS
                   </button>
+                  </div>
+                  
                   
                 </div>
               </div>
@@ -117,11 +124,12 @@
                   <h5 class="card-title">Vestido Bordado Branco</h5>
                   <p class="card-text">VESTIDO DE MALHA COMBINADO COM BORDADOS</p>
                   <h5>R$ 270,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Vestindo Bordado Branco', 270.00,'../images/image20.jpg')" >Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1" id="compras">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#vestido">
+                    <div class="d-flex gap-2 align-content-center justify-content-center">
+                      <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Vestindo Bordado Branco', 270.00,'../images/image20.jpg')" >Adicionar</a>
+                  <button type="button" class="btn btn" id="verMais" data-bs-toggle="modal" data-bs-target="#vestido">
                     VER MAIS
                   </button>
+                  </div>
                   
                 </div>
               </div>
@@ -132,13 +140,14 @@
                   <h5 class="card-title">Top de ombro</h5>
                   <p class="card-text">Top de ombro descobertos com ziper</p>
                   <h5>R$ 200,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Top de ombro', 200.00, '../images/topDeOmbroDescobertosComZiper.jpg')">Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1" id="compras">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#top">
-                    VER MAIS
-                  </button>
-                  
-                </div>
+                  <div class="d-flex gap-2 align-content-cente justify-content-center">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Top de ombro', 200.00, '../images/topDeOmbroDescobertosComZiper.jpg')">Adicionar</a>
+                    <button type="button" class="btn btn " data-bs-toggle="modal" data-bs-target="#top">
+                      VER MAIS
+                    </button>
+                  </div>
+                
+                  </div>
               </div>
               
               <div class="card" style="width: 18rem;">
@@ -147,12 +156,13 @@
                   <h5 class="card-title">Biquíni Orange</h5>
                   <p class="card-text">Conjunto de biquíni orange</p>
                   <h5>R$ 270,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Biquini Orange', 270.00,'../images/biquíniComBrilho.jpg')">Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1" id="compras">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#biquini">
-                    VER MAIS
-                  </button>
-                  
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Biquini Orange', 270.00,'../images/biquíniComBrilho.jpg')">Adicionar</a>
+                    <button type="button" class="btn btn " data-bs-toggle="modal" data-bs-target="#biquini">
+                      VER MAIS
+                    </button>
+                  </div>
+                                   
                 </div>
               </div>
 
@@ -165,11 +175,13 @@
                   <h5 class="card-title">Jaqueta Edition</h5>
                   <p class="card-text">Jaqueta Preta Limite Edition</p>
                   <h5>R$ 300,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Jaqueta Edition', 300.00, '../images/jaquetaLimitedEdition.jpg')">Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#jaqueta">
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Jaqueta Edition', 300.00, '../images/jaquetaLimitedEdition.jpg')">Adicionar</a>
+                  <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#jaqueta">
                     VER MAIS
                   </button>
+                  </div>
+                  
                   
                 </div>
               </div>
@@ -180,11 +192,13 @@
                   <h5 class="card-title">Moletom com capuz</h5>
                   <p class="card-text">Moletom com capuz black de algodão</p>
                   <h5>R$ 100,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Moletom com capuz', 100.00,'../images/moletomComCapuz.jpg')" >Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#moletom">
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Moletom com capuz', 100.00,'../images/moletomComCapuz.jpg')" >Adicionar</a>
+                  <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#moletom">
                     VER MAIS
                   </button>
+                  </div>
+                  
                   
                 </div>
               </div>
@@ -196,11 +210,13 @@
                   <h5 class="card-title">Colete Utility</h5>
                   <p class="card-text">Colete Utility marrom</p>
                   <h5>R$ 300,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Coloquete Utility', 300.00, '../images/coleteUtility.jpg')" >Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#colete">
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Moletom com capuz', 100.00,'../images/moletomComCapuz.jpg')" >Adicionar</a>
+                  <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#moletom">
                     VER MAIS
                   </button>
+                  </div>
+                  
                   
                 </div>
               </div>
@@ -212,11 +228,13 @@
                   <h5 class="card-title">Camiseta com Textura Vertical</h5>
                   <p class="card-text">Camiseta com textura Vertical Black</p>
                   <h5>R$ 150,00</h5>
-                  <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Camiseta com Textura Vertical', 150.00, '../images/camistaComTexturaVertical.jpg')" >Adicionar</a>
-                  <a href="../pages/compras.html" class="btn-compra btn mx-1">Comprar</a>
-                  <button type="button" class="btn btn my-2 px-3 mx-5 d-flex " data-bs-toggle="modal" data-bs-target="#camiseta">
+                  <div class="d-flex justify-content-center gap-2">
+                    <a href="#" class="btn btn mx-1" onclick="adicionarAoCarrinho('Moletom com capuz', 100.00,'../images/moletomComCapuz.jpg')" >Adicionar</a>
+                  <button type="button" class="btn btn" data-bs-toggle="modal" data-bs-target="#moletom">
                     VER MAIS
                   </button>
+                  </div>
+                  
                   
                 </div>
               </div>

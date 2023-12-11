@@ -12,3 +12,33 @@
     outline: none;
     cursor: pointer;
 }
+
+
+
+#lista-carrinho input {
+    width: 50px; /* Defina a largura desejada para o input */
+}
+
+
+
+
+#carrinho1 a{
+    color: white;
+}
+#carrinho1 a:hover{
+    color:  rgb(75, 75, 75);
+}
+
+
+#carrinho1 button:hover{
+    color:rgb(75, 75, 75) ;
+}
+
+
+#lista-carrinho img {
+    margin-left: 10px; /* Ajuste o espaçamento entre a imagem e o texto */
+  }
+  #lista-carrinho li {
+    margin-right: 20px; /* Ajuste o espaçamento entre os itens da lista */
+  }
+

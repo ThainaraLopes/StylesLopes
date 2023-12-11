@@ -127,7 +127,7 @@ main{
 
 #imagem{
     width: 40%;
-    height: 650px;
+    height: 800px;
     margin: 10%;
     background-color: var(--branco);
 }
@@ -183,7 +183,10 @@ input{
 }
 
 
-
+#lista-carrinho input {
+    width: 50px; /* Defina a largura desejada para o input */
+  }
+  
 
 
 footer{
