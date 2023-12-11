@@ -1,4 +1,4 @@
-  
+
 // Função para exibir produtos no carrinho
 function exibirCarrinho() {
     // Obtém o carrinho da sessão
