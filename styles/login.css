@@ -20,7 +20,7 @@
 
 body{
     width: 100%;
-    height: 800px;
+    height: auto;
     display: flex;
     background-color: gray !important;
     margin: 0; /* Remova as margens padrão do body */
@@ -209,21 +209,24 @@ form{
     
     body{
         width: 100%;
-        height: 100vh;
+        height: auto;
     }
 
     form{
         width: 60%;
         height: 600px;
+        background-color: rgba(128, 128, 128, 0.527)!important;
+       
     }
 
     #imagem{
-        z-index: 1000;
-        height: 600px;
+       height: 600px;
+       position: fixed;
+       z-index: 1000;
        
     }
 
     #imagem1{
-        z-index: 1; 
+        position: relative;
     }
 }

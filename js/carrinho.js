@@ -99,7 +99,16 @@ function limparCarrinho() {
 }
 
 
+
+
+
 function exibirAlertaCompra() {
+
+  limparCarrinho();
+
+  
   alert('Parabéns! Sua compra foi realizada com sucesso.');
-  // Adicione aqui o código para realizar a compra ou redirecionar o usuário, se necessário.
+
 }
+
+
